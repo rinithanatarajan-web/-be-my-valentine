@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Be My Valentine 💖</title>
+  <style>
+    body {
+      background: #ffd6e8;
+      text-align: center;
+      font-family: Arial;
+      margin-top: 40px;
+    }
+    h1 {
+      color: #d63384;
+    }
+    img {
+      width: 150px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 25px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background: gray;
+      color: white;
+      position: absolute;
+    }
+    #msg {
+      display: none;
+      font-size: 24px;
+      color: #c9184a;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Will you be my Valentine? 💘</h1>
+
+<img src="me.jpg">
+<img src="him.jpg">
+
+<br><br>
+
+<button id="yes" onclick="yes()">YES 💖</button>
+<button id="no" onmouseover="move()">NO 😜</button>
+
+<div id="msg">Yayyy ❤️ I knew it! Happy Valentine’s Day 🥰</div>
+
+<script>
+  function move() {
+    let x = Math.random() * 80;
+    let y = Math.random() * 80;
+    document.getElementById("no").style.left = x + "vw";
+    document.getElementById("no").style.top = y + "vh";
+  }
+  function yes() {
+    document.getElementById("msg").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
